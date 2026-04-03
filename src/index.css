@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-manor-950 text-bone-200 font-gothic;
+    margin: 0;
+    min-height: 100vh;
+  }
+  #root { min-height: 100vh; }
+  * { box-sizing: border-box; }
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { @apply bg-manor-900; }
+  ::-webkit-scrollbar-thumb { @apply bg-manor-600 rounded; }
+}
+
+@layer components {
+  .btn-primary { @apply bg-candle-600 hover:bg-candle-500 text-manor-950 font-bold py-2 px-4 rounded transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed; }
+  .btn-danger  { @apply bg-blood-700 hover:bg-blood-600 text-white font-bold py-2 px-4 rounded transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed; }
+  .btn-ghost   { @apply border border-manor-600 hover:border-candle-600 text-bone-300 hover:text-candle-400 py-2 px-4 rounded transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed; }
+  .card        { @apply bg-manor-900 border border-manor-700 rounded-lg p-4; }
+  .input       { @apply bg-manor-800 border border-manor-600 text-bone-100 rounded px-3 py-2 w-full focus:outline-none focus:border-candle-600 placeholder-manor-500 transition-colors; }
+  .label       { @apply text-bone-400 text-sm font-bold uppercase tracking-wider mb-1 block; }
+}
